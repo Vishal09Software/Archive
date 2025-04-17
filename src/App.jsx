@@ -15,7 +15,7 @@ function App() {
   // New fields:
   const [titleValue, setTitleValue] = useState("Wave Multitrade");
   const [addressValue, setAddressValue] = useState(
-    "M/28, FIR Mz 10/21, Flox Chamber,\nRoad No.-1, Roxy Cinema,\nOpera House, Girgaon, Mumbai - 400004\nE-mail: wavemultitrade@gmail.com"
+    "M/28, FIR Mz 10/21, Flox Chamber,\nRoad No.-1, Roxy Cinema,\nOpera House, Girgaon, District - 400004\nE-mail: wavemultitrade@gmail.com"
   );
   const [forValue, setForValue] = useState("Wave Multitrade");
 
@@ -331,7 +331,7 @@ function App() {
               <ol style={{ fontWeight: '500', marginTop: '-8px' }}>
                 <li>Goods once sold will not be taken back.</li>
                 <li>No responsibility for breakages during transit.</li>
-                <li>All Disputes subject to Mumbai Jurisdiction only.</li>
+                <li>All Disputes subject to District Jurisdiction only.</li>
                 <li>E.&amp; O.E.</li>
               </ol>
             </div>
@@ -443,7 +443,7 @@ function App() {
             <ul style={{ marginTop: '5px', paddingLeft: '18px' }}>
               <li>Goods once sold will not be taken back.</li>
               <li>No responsibility for breakages during transit.</li>
-              <li>All disputes subject to Mumbai Jurisdiction only.</li>
+              <li>All disputes subject to District Jurisdiction only.</li>
               <li>E.& O.E.</li>
             </ul>
           </div>
@@ -573,7 +573,7 @@ function App() {
             <ul style={{ marginTop: '5px', paddingLeft: '18px' }}>
               <li>Goods once sold will not be taken back.</li>
               <li>No responsibility for breakages during transit.</li>
-              <li>All disputes subject to Mumbai Jurisdiction only.</li>
+              <li>All disputes subject to District Jurisdiction only.</li>
               <li>E.& O.E.</li>
             </ul>
           </div>
@@ -676,7 +676,7 @@ function App() {
             <ul style={{ margin: '5px 0 0 20px' }}>
               <li>Goods once sold will not be taken back.</li>
               <li>No responsibility for breakages during transit.</li>
-              <li>All disputes subject to Mumbai Jurisdiction only.</li>
+              <li>All disputes subject to District Jurisdiction only.</li>
               <li>E.& O.E.</li>
             </ul>
           </div>
@@ -760,7 +760,7 @@ function App() {
           <ul style={{ margin: '5px 0 0 20px' }}>
             <li>Goods once sold will not be taken back.</li>
             <li>No responsibility for breakages during transit.</li>
-            <li>All disputes subject to Mumbai Jurisdiction only.</li>
+            <li>All disputes subject to District Jurisdiction only.</li>
             <li>E.& O.E.</li>
           </ul>
         </div>
@@ -855,7 +855,7 @@ function App() {
           <ul style={{ margin: '5px 0 0 20px' }}>
             <li>Goods once sold will not be taken back.</li>
             <li>No responsibility for breakages during transit.</li>
-            <li>All disputes subject to Mumbai Jurisdiction only.</li>
+            <li>All disputes subject to District Jurisdiction only.</li>
             <li>E.& O.E.</li>
           </ul>
         </div>
@@ -944,7 +944,7 @@ function App() {
           <ul style={{ margin: '5px 0 0 20px' }}>
             <li>Goods once sold will not be taken back.</li>
             <li>No responsibility for breakages during transit.</li>
-            <li>All disputes subject to Mumbai Jurisdiction only.</li>
+            <li>All disputes subject to District Jurisdiction only.</li>
             <li>E.& O.E.</li>
           </ul>
         </div>
@@ -1029,7 +1029,7 @@ function App() {
             <ul style={{ margin: '5px 0 0 20px' }}>
               <li>Goods once sold will not be taken back.</li>
               <li>No responsibility for breakages during transit.</li>
-              <li>All disputes subject to Mumbai Jurisdiction only.</li>
+              <li>All disputes subject to District Jurisdiction only.</li>
               <li>E.& O.E.</li>
             </ul>
           </div>
@@ -1106,7 +1106,7 @@ function App() {
               <ul style={{ marginTop: '5px', paddingLeft: '18px' }}>
                 <li>Goods once sold will not be taken back.</li>
                 <li>No responsibility for breakages during transit.</li>
-                <li>All disputes subject to Mumbai Jurisdiction only.</li>
+                <li>All disputes subject to District Jurisdiction only.</li>
                 <li>E.& O.E.</li>
               </ul>
               <div style={{ marginTop: '30px', textAlign: 'center', fontSize: '12px' }}>
@@ -1198,7 +1198,7 @@ function App() {
           <ul >
             <li>Goods once sold will not be taken back.</li>
             <li>No responsibility for breakages during transit.</li>
-            <li>All disputes subject to Mumbai Jurisdiction only.</li>
+            <li>All disputes subject to District Jurisdiction only.</li>
             <li>E.& O.E.</li>
           </ul>
         </div>
