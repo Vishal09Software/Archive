@@ -968,6 +968,9 @@ function App() {
           minHeight: '800px',
           fontFamily: 'Helvetica, sans-serif',
           boxShadow: '0 3px 6px rgba(0,0,0,0.1)',
+          border: '1px solid #007BFF',
+          borderRadius: '5px',
+          padding: '20px',
           color: 'black'
         }}>
         <div style={{ backgroundColor: '#007BFF', color: '#fff', padding: '20px', textAlign: 'center' }}>
