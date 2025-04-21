@@ -236,7 +236,7 @@ function App() {
                   width: '100%',
                   marginLeft: '6px',
                   borderBottom: '1px dotted black',
-                  fontSize: '18px',
+                  fontSize: '16px',
                   fontWeight: 'bold',
                 }}>{name}</p>
               </div>
@@ -399,7 +399,7 @@ function App() {
             borderBottom: '1px dotted #000',
             padding: '0 4px',
             fontWeight: 'bold',
-            fontSize: '18px'
+            fontSize: '16px'
           }}>
             {name}
           </span>
@@ -409,7 +409,7 @@ function App() {
         <table style={{ width: '100%', borderCollapse: 'collapse', marginBottom: '15px' }}>
           <thead>
             <tr style={{ background: '#e0e0e0' }}>
-              <th style={{ padding: '8px', border: '1px solid #333' }}>#</th>
+              <th style={{ padding: '8px', border: '1px solid #333' }}>Sr. No.</th>
               <th style={{ padding: '8px', border: '1px solid #333' }}>Item Description</th>
               <th style={{ padding: '8px', border: '1px solid #333' }}>Amount (₹)</th>
             </tr>
@@ -513,7 +513,7 @@ function App() {
                 marginLeft: '5px',
                 padding: '0 4px',
                 fontWeight: 'bold',
-                fontSize: '18px'
+                fontSize: '16px'
               }}>
                 {name}
               </span>
@@ -630,7 +630,7 @@ function App() {
             borderBottom: '1px dotted #000',
             padding: '0 4px',
             fontWeight: 'bold',
-            fontSize: '18px'
+            fontSize: '16px'
           }}>
             {name}
           </span>
@@ -644,7 +644,7 @@ function App() {
         }}>
           <thead style={{ backgroundColor: '#f0f0f0' }}>
             <tr>
-              <th style={{ padding: '10px', border: '1px solid #ddd' }}>#</th>
+              <th style={{ padding: '10px', border: '1px solid #ddd' }}>Sr. No.</th>
               <th style={{ padding: '10px', border: '1px solid #ddd' }}>Item Description</th>
               <th style={{ padding: '10px', border: '1px solid #ddd' }}>Amount (₹)</th>
             </tr>
@@ -720,7 +720,7 @@ function App() {
         </div>
         <div style={{ marginBottom: '20px', display: 'flex', justifyContent: 'space-between', fontSize: '14px' }}>
           <div>
-            <strong>Bill To:</strong> <span style={{ borderBottom: '1px dotted #000', fontWeight: 'bold', fontSize: '18px' }}>{name}</span>
+            <strong>Bill To:</strong> <span style={{ borderBottom: '1px dotted #000', fontWeight: 'bold', fontSize: '16px' }}>{name}</span>
           </div>
           <div style={{ textAlign: 'right' }}>
             <strong>Date:</strong> <span style={{ borderBottom: '1px dotted #000', padding: '0 8px' }}></span>
@@ -731,7 +731,7 @@ function App() {
         <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '14px' }}>
           <thead style={{ background: '#f2f2f2' }}>
             <tr>
-              <th style={{ padding: '10px', border: '1px solid #ccc' }}>#</th>
+              <th style={{ padding: '10px', border: '1px solid #ccc' }}>Sr. No.</th>
               <th style={{ padding: '10px', border: '1px solid #ccc' }}>Description</th>
               <th style={{ padding: '10px', border: '1px solid #ccc' }}>Amount (₹)</th>
             </tr>
@@ -816,7 +816,7 @@ function App() {
         <hr style={{ border: '1px solid #4CAF50' }} />
         <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '20px', marginBottom: '20px' }}>
           <div>
-            <strong>Bill To:</strong> <span style={{ borderBottom: '1px dotted #000', fontWeight: 'bold', fontSize: '18px' }}>{name}</span>
+            <strong>Bill To:</strong> <span style={{ borderBottom: '1px dotted #000', fontWeight: 'bold', fontSize: '16px' }}>{name}</span>
           </div>
           <div>
             <strong>For:</strong> <span style={{ borderBottom: '1px dotted #000' }}>{forValue}</span>
@@ -825,7 +825,7 @@ function App() {
         <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '14px' }}>
           <thead style={{ background: '#e8f5e9' }}>
             <tr>
-              <th style={{ padding: '10px', border: '1px solid #4CAF50' }}>#</th>
+              <th style={{ padding: '10px', border: '1px solid #4CAF50' }}>Sr. No.</th>
               <th style={{ padding: '10px', border: '1px solid #4CAF50' }}>Description</th>
               <th style={{ padding: '10px', border: '1px solid #4CAF50' }}>Amount (₹)</th>
             </tr>
@@ -905,7 +905,7 @@ function App() {
         </div>
         <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '14px', marginBottom: '20px' }}>
           <div>
-            <strong>Bill To:</strong> <span style={{ borderBottom: '1px dotted #000', fontWeight: 'bold', fontSize: '18px' }}>{name}</span>
+            <strong>Bill To:</strong> <span style={{ borderBottom: '1px dotted #000', fontWeight: 'bold', fontSize: '16px' }}>{name}</span>
           </div>
           <div style={{ textAlign: 'right' }}>
             <p><strong>Date:</strong> <span style={{ borderBottom: '1px dotted #000', padding: '0 8px' }}></span></p>
@@ -915,7 +915,7 @@ function App() {
         <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '14px' }}>
           <thead style={{ background: '#eaeaea' }}>
             <tr>
-              <th style={{ padding: '10px', border: '1px solid #ccc' }}>#</th>
+              <th style={{ padding: '10px', border: '1px solid #ccc' }}>Sr. No.</th>
               <th style={{ padding: '10px', border: '1px solid #ccc' }}>Description</th>
               <th style={{ padding: '10px', border: '1px solid #ccc' }}>Amount (₹)</th>
             </tr>
@@ -993,7 +993,7 @@ function App() {
         <div style={{ padding: '20px' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '20px', fontSize: '14px' }}>
             <div>
-              <strong>Bill To:</strong> <span style={{ borderBottom: '1px dotted #000', fontWeight: 'bold', fontSize: '18px' }}>{name}</span>
+              <strong>Bill To:</strong> <span style={{ borderBottom: '1px dotted #000', fontWeight: 'bold', fontSize: '16px' }}>{name}</span>
             </div>
             <div style={{ textAlign: 'right' }}>
               <p><strong>Date:</strong> <span style={{ borderBottom: '1px dotted #000', padding: '0 8px' }}></span></p>
@@ -1003,7 +1003,7 @@ function App() {
           <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '14px' }}>
             <thead style={{ background: '#f1f1f1' }}>
               <tr>
-                <th style={{ padding: '10px', border: '1px solid #ddd' }}>#</th>
+                <th style={{ padding: '10px', border: '1px solid #ddd' }}>Sr. No.</th>
                 <th style={{ padding: '10px', border: '1px solid #ddd' }}>Description</th>
                 <th style={{ padding: '10px', border: '1px solid #ddd' }}>Amount (₹)</th>
               </tr>
@@ -1070,7 +1070,7 @@ function App() {
             <p style={{ fontSize: '12px', whiteSpace: 'pre-line' }}>{addressValue}</p>
             <div style={{ marginTop: '20px', fontSize: '14px' }}>
               <p><strong>Bill To:</strong></p>
-              <p style={{ borderBottom: '1px dotted #000', fontWeight: 'bold', fontSize: '18px' }}>{name}</p>
+              <p style={{ borderBottom: '1px dotted #000', fontWeight: 'bold', fontSize: '16px' }}>{name}</p>
               <p><strong>Date:</strong> <span style={{ borderBottom: '1px dotted #000', padding: '0 8px' }}></span></p>
               <p><strong>Invoice #:</strong> <span style={{ borderBottom: '1px dotted #000', padding: '0 8px' }}></span></p>
             </div>
@@ -1080,7 +1080,7 @@ function App() {
             <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '14px' }}>
               <thead style={{ background: '#ddd' }}>
                 <tr>
-                  <th style={{ padding: '10px', border: '1px solid #ccc' }}>#</th>
+                  <th style={{ padding: '10px', border: '1px solid #ccc' }}>Sr. No.</th>
                   <th style={{ padding: '10px', border: '1px solid #ccc' }}>Description</th>
                   <th style={{ padding: '10px', border: '1px solid #ccc' }}>Amount (₹)</th>
                 </tr>
@@ -1162,7 +1162,7 @@ function App() {
         <div style={{ marginBottom: '20px', display: 'flex', justifyContent: 'space-between', fontSize: '14px' }}>
          
           <div>
-            <strong>Client:</strong> <span style={{ borderBottom: '1px dotted #000', fontWeight: 'bold', fontSize: '18px' }}>{name}</span>
+            <strong>Client:</strong> <span style={{ borderBottom: '1px dotted #000', fontWeight: 'bold', fontSize: '16px' }}>{name}</span>
           </div>
           <div style={{ textAlign: 'right' }}>
             <p><strong>Date:</strong> <span style={{ borderBottom: '1px dotted #000', padding: '0 8px' }}></span></p>
@@ -1172,7 +1172,7 @@ function App() {
         <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '14px', marginBottom: '20px' }}>
           <thead style={{ background: '#e0e0e0' }}>
             <tr>
-              <th style={{ padding: '10px', border: '1px solid #999' }}>#</th>
+              <th style={{ padding: '10px', border: '1px solid #999' }}>Sr. No.</th>
               <th style={{ padding: '10px', border: '1px solid #999' }}>Item Description</th>
               <th style={{ padding: '10px', border: '1px solid #999' }}>Amount (₹)</th>
             </tr>
