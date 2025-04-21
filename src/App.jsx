@@ -385,7 +385,7 @@ function App() {
           <div>
             <p style={{ margin: '0', fontWeight: 'bold' }}>Invoice</p>
           </div>
-          <div style={{ textAlign: 'right', fontSize: '14px' }}>
+          <div style={{ marginRight: '40px', fontSize: '14px' }}>
             <div><strong>Date:</strong> <span style={{ borderBottom: '1px dotted #000', padding: '0 8px' }}></span></div>
             <div><strong>Invoice #:</strong> <span style={{ borderBottom: '1px dotted #000', padding: '0 8px' }}></span></div>
           </div>
@@ -519,7 +519,7 @@ function App() {
               </span>
             </div>
           </div>
-          <div style={{ textAlign: 'right' }}>
+          <div style={{ marginRight: '40px' }}>
             <p style={{ margin: '5px 0' }}>
               <strong>Date:</strong> <span style={{ borderBottom: '1px dotted #000', padding: '0 8px' }}></span>
             </p>
@@ -616,7 +616,7 @@ function App() {
           <div>
             <strong>Invoice</strong>
           </div>
-          <div>
+          <div style={{marginRight: '40px'}}>
             <strong>Date:</strong> <span style={{ borderBottom: '1px dotted #000', padding: '0 8px' }}></span>
             <br />
             <strong>Invoice #:</strong> <span style={{ borderBottom: '1px dotted #000', padding: '0 8px' }}></span>
@@ -722,7 +722,7 @@ function App() {
           <div>
             <strong>Bill To:</strong> <span style={{ borderBottom: '1px dotted #000', fontWeight: 'bold', fontSize: '16px' }}>{name}</span>
           </div>
-          <div style={{ textAlign: 'right' }}>
+          <div style={{ marginRight: '40px' }}>
             <strong>Date:</strong> <span style={{ borderBottom: '1px dotted #000', padding: '0 8px' }}></span>
             <br />
             <strong>Invoice #:</strong> <span style={{ borderBottom: '1px dotted #000', padding: '0 8px' }}></span>
@@ -808,7 +808,7 @@ function App() {
             <h2 style={{ margin: 0 }}>{titleValue}</h2>
             <p style={{ fontSize: '12px', whiteSpace: 'pre-line', margin: '5px 0' }}>{addressValue}</p>
           </div>
-          <div style={{ textAlign: 'right' }}>
+          <div style={{ marginRight: '40px' }}>
             <p><strong>Date:</strong> <span style={{ borderBottom: '1px dotted #000', padding: '0 8px' }}></span></p>
             <p><strong>Invoice #:</strong> <span style={{ borderBottom: '1px dotted #000', padding: '0 8px' }}></span></p>
           </div>
@@ -907,7 +907,7 @@ function App() {
           <div>
             <strong>Bill To:</strong> <span style={{ borderBottom: '1px dotted #000', fontWeight: 'bold', fontSize: '16px' }}>{name}</span>
           </div>
-          <div style={{ textAlign: 'right' }}>
+          <div style={{ marginRight: '40px' }}>
             <p><strong>Date:</strong> <span style={{ borderBottom: '1px dotted #000', padding: '0 8px' }}></span></p>
             <p><strong>Invoice #:</strong> <span style={{ borderBottom: '1px dotted #000', padding: '0 8px' }}></span></p>
           </div>
@@ -995,7 +995,7 @@ function App() {
             <div>
               <strong>Bill To:</strong> <span style={{ borderBottom: '1px dotted #000', fontWeight: 'bold', fontSize: '16px' }}>{name}</span>
             </div>
-            <div style={{ textAlign: 'right' }}>
+            <div style={{ marginRight: '40px' }}>
               <p><strong>Date:</strong> <span style={{ borderBottom: '1px dotted #000', padding: '0 8px' }}></span></p>
               <p><strong>Invoice #:</strong> <span style={{ borderBottom: '1px dotted #000', padding: '0 8px' }}></span></p>
             </div>
@@ -1164,7 +1164,7 @@ function App() {
           <div>
             <strong>Client:</strong> <span style={{ borderBottom: '1px dotted #000', fontWeight: 'bold', fontSize: '16px' }}>{name}</span>
           </div>
-          <div style={{ textAlign: 'right' }}>
+          <div style={{ marginRight: '40px' }}>
             <p><strong>Date:</strong> <span style={{ borderBottom: '1px dotted #000', padding: '0 8px' }}></span></p>
             <p><strong>Invoice #:</strong> <span style={{ borderBottom: '1px dotted #000', padding: '0 8px' }}></span></p>
           </div>
