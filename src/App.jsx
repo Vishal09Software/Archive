@@ -258,7 +258,7 @@ function App() {
                     width: "52px",
                     fontSize:'16px'
 
-                  }}>Sr. No.</th>
+                  }}>S. No.</th>
                   <th
                     style={{
                       borderTop: '1px solid black',
@@ -269,11 +269,12 @@ function App() {
                     }}
                   >Description</th>
                   <th
+                  
                     style={{
                       borderTop: '1px solid black',
                       borderBottom: '1px solid black',
-                    fontSize:'16px'
-
+                      fontSize:'16px',
+                      width:"30%"
                     }}
                   >Amount (₹)</th>
                 </tr>
@@ -286,19 +287,19 @@ function App() {
                       borderBottom: '1px solid black',
                       borderRight: '1px solid black',
                       padding:"10px",
-                      fontSize:"16px"
+                      fontSize:"14px"
                     }}>{index + 1}.</td>
                     <td style={{
                       borderTop: '1px solid black',
                       borderBottom: '1px solid black',
                       borderRight: '1px solid black',
-                      fontSize:"16px"
+                      fontSize:"14px"
 
                     }}>{item.name}</td>
                     <td style={{
                       borderTop: '1px solid black',
                       borderBottom: '1px solid black',
-                      fontSize:"16px"
+                      fontSize:"14px"
 
                     }}>₹{item.value}</td>
                   </tr>
@@ -314,17 +315,17 @@ function App() {
                   width: '322px',
                   borderBottom: '1px solid black',
                   borderRight: '1px solid black',
-                  fontSize:"16px"
+                  fontSize:"14px"
 
                 }}>
-                  <strong style={{ fontSize: '16px' }}>
+                  <strong style={{ fontSize: '14px' }}>
                     Amount (in words) Rs:&nbsp;
                   </strong>
                   <span style={{ borderBottom: '1px solid black' }}>
                     {numberToWords(total)}
                   </span>
                 </td>
-                <td style={{ borderBottom: '1px solid black', fontSize:"16px" }}>
+                <td style={{ borderBottom: '1px solid black', fontSize:"14px", width:"30%"}}>
                   <strong>
                     Total: ₹{total}
                   </strong>
@@ -372,12 +373,11 @@ function App() {
   // LAYOUT #2 – Improved Boxed, professional layout
   const Layout2 = () => {
     const total = itemBreakdown.reduce((sum, itm) => sum + itm.value, 0);
-
     return (
       <div
         className="pdf-preview"
         style={{
-          margin: '60px auto',
+          margin: '50px auto',
           padding: '20px',
           border: '1px solid #333',
           width: '800px',
@@ -385,7 +385,6 @@ function App() {
           backgroundColor: '#f9f9f9',
           minHeight: '800px',
           color: 'black'
-
         }}>
         {/* Header */}
         <div style={{ textAlign: 'center', marginBottom: '20px' }}>
@@ -425,17 +424,17 @@ function App() {
         <table style={{ width: '100%', borderCollapse: 'collapse', marginBottom: '15px' }}>
           <thead>
             <tr style={{ background: '#e0e0e0' }}>
-              <th style={{ padding: '8px', border: '1px solid #333' }}>Sr. No.</th>
-              <th style={{ padding: '8px', border: '1px solid #333' }}>Item Description</th>
-              <th style={{ padding: '8px', border: '1px solid #333' }}>Amount (₹)</th>
+              <th style={{ padding: '8px', border: '1px solid #333', fontSize:"16px"}} >Sr. No.</th>
+              <th style={{ padding: '8px', border: '1px solid #333' ,fontSize:"16px"}}>Item Description</th>
+              <th style={{ padding: '8px', border: '1px solid #333' ,fontSize:"16px"}}>Amount (₹)</th>
             </tr>
           </thead>
           <tbody>
             {itemBreakdown.map((item, index) => (
               <tr key={index} style={{ textAlign: 'center' }}>
-                <td style={{ padding: '8px', border: '1px solid #333' }}>{index + 1}</td>
-                <td style={{ padding: '8px', border: '1px solid #333', textAlign: 'left' }}>{item.name}</td>
-                <td style={{ padding: '8px', border: '1px solid #333' }}>₹{item.value}</td>
+                <td style={{ padding: '8px', border: '1px solid #333' ,fontSize:"16px"}}>{index + 1}</td>
+                <td style={{ padding: '8px', border: '1px solid #333', textAlign: 'left' ,fontSize:"16px" }}>{item.name}</td>
+                <td style={{ padding: '8px', border: '1px solid #333' ,fontSize:"16px"}}>₹{item.value}</td>
               </tr>
             ))}
           </tbody>
@@ -445,7 +444,7 @@ function App() {
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <div style={{ maxWidth: '60%' }}>
             <p style={{ margin: '5px 0' }}><strong>Amount in words:</strong></p>
-            <p style={{ fontStyle: 'italic', margin: '5px 0' }}>{numberToWords(total)}</p>
+            <p style={{ fontStyle: 'italic', margin: '5px 0' ,fontSize:"16px"}}>{numberToWords(total)}</p>
           </div>
           <div style={{ textAlign: 'right' }}>
             <p style={{ margin: '5px 0', fontSize: '16px', fontWeight: 'bold' }}>Total: ₹{total}</p>
