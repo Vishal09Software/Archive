@@ -121,7 +121,7 @@ function App() {
           border: '1px solid black',
           display: 'flex',
           minHeight: '800px',
-          marginTop: '70px',
+          marginTop: '50px',
         }}
       >
         <div style={{
