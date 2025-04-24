@@ -1376,4 +1376,20 @@ function App() {
   );
 }
 
+export default App;erSelectedLayout()}
+      </div>
+
+      {/* Download button */}
+      <div style={{ textAlign: 'center', marginTop: "40px" }}>
+        <button
+          className="download-btn"
+          onClick={handleDownload}
+        >
+          Download as PDF
+        </button>
+      </div>
+    </div>
+  );
+}
+
 export default App;
