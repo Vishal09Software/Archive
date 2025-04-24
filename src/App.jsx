@@ -121,7 +121,7 @@ function App() {
           border: '1px solid black',
           display: 'flex',
           minHeight: '800px',
-          marginTop: '20px',
+          marginTop: '70px',
         }}
       >
         <div style={{
@@ -129,7 +129,8 @@ function App() {
           width: '800px',
           border: '1px solid black',
           boxShadow: '0 0 0 1px black',
-          color: 'black'
+          color: 'black',
+
         }}>
           {/* Title & Address */}
           <div style={{
@@ -188,7 +189,7 @@ function App() {
               paddingRight: '6px',
               display: 'flex',
               justifyContent: 'space-between',
-              flexDirection: 'row'
+              flexDirection: 'row',
             }}>
               <p>
                 <strong>Sr. No.</strong> &nbsp;&nbsp;
@@ -216,7 +217,7 @@ function App() {
             justifyContent: 'space-between',
             flexDirection: 'row',
             width: '100%',
-            marginTop: '-12px',
+            marginTop: '10px',
           }}>
             <div style={{
               paddingLeft: '6px',
@@ -238,6 +239,7 @@ function App() {
                   borderBottom: '1px dotted black',
                   fontSize: '16px',
                   fontWeight: 'bold',
+                  marginBottom:"20px"
                 }}>{name}</p>
               </div>
             </div>
@@ -253,19 +255,25 @@ function App() {
                     borderTop: '1px solid black',
                     borderBottom: '1px solid black',
                     borderRight: '1px solid black',
-                    width: "52px"
+                    width: "52px",
+                    fontSize:'16px'
+
                   }}>Sr. No.</th>
                   <th
                     style={{
                       borderTop: '1px solid black',
                       borderBottom: '1px solid black',
                       borderRight: '1px solid black',
+                    fontSize:'16px'
+
                     }}
                   >Description</th>
                   <th
                     style={{
                       borderTop: '1px solid black',
                       borderBottom: '1px solid black',
+                    fontSize:'16px'
+
                     }}
                   >Amount (₹)</th>
                 </tr>
@@ -277,15 +285,21 @@ function App() {
                       borderTop: '1px solid black',
                       borderBottom: '1px solid black',
                       borderRight: '1px solid black',
+                      padding:"10px",
+                      fontSize:"16px"
                     }}>{index + 1}.</td>
                     <td style={{
                       borderTop: '1px solid black',
                       borderBottom: '1px solid black',
                       borderRight: '1px solid black',
+                      fontSize:"16px"
+
                     }}>{item.name}</td>
                     <td style={{
                       borderTop: '1px solid black',
                       borderBottom: '1px solid black',
+                      fontSize:"16px"
+
                     }}>₹{item.value}</td>
                   </tr>
                 ))}
@@ -300,15 +314,17 @@ function App() {
                   width: '322px',
                   borderBottom: '1px solid black',
                   borderRight: '1px solid black',
+                  fontSize:"16px"
+
                 }}>
-                  <strong style={{ fontSize: '12px' }}>
+                  <strong style={{ fontSize: '16px' }}>
                     Amount (in words) Rs:&nbsp;
                   </strong>
                   <span style={{ borderBottom: '1px solid black' }}>
                     {numberToWords(total)}
                   </span>
                 </td>
-                <td style={{ borderBottom: '1px solid black' }}>
+                <td style={{ borderBottom: '1px solid black', fontSize:"16px" }}>
                   <strong>
                     Total: ₹{total}
                   </strong>
@@ -328,7 +344,7 @@ function App() {
           }}>
             <div>
               <p><strong>Terms and Conditions:</strong></p>
-              <ol style={{ fontWeight: '500', marginTop: '-8px' }}>
+              <ol style={{ fontWeight: '500', margin: '10px' }}>
                 <li>Goods once sold will not be taken back.</li>
                 <li>No responsibility for breakages during transit.</li>
                 <li>All Disputes subject to District Jurisdiction only.</li>
