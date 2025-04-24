@@ -279,7 +279,7 @@ function App() {
                   >Amount (₹)</th>
                 </tr>
               </thead>
-              <tbody style={{ fontWeight: 'bold' }}>
+              <tbody style={{ fontWeight: '400' }}>
                 {itemBreakdown.map((item, index) => (
                   <tr key={index}>
                     <td style={{
