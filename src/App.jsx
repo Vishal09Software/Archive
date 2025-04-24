@@ -258,7 +258,7 @@ function App() {
                     width: "52px",
                     fontSize:'16px'
 
-                  }}>S. No.</th>
+                  }}>Sr. No.</th>
                   <th
                     style={{
                       borderTop: '1px solid black',
@@ -287,19 +287,19 @@ function App() {
                       borderBottom: '1px solid black',
                       borderRight: '1px solid black',
                       padding:"10px",
-                      fontSize:"14px"
+                      fontSize:"16px"
                     }}>{index + 1}.</td>
                     <td style={{
                       borderTop: '1px solid black',
                       borderBottom: '1px solid black',
                       borderRight: '1px solid black',
-                      fontSize:"14px"
+                      fontSize:"16px"
 
                     }}>{item.name}</td>
                     <td style={{
                       borderTop: '1px solid black',
                       borderBottom: '1px solid black',
-                      fontSize:"14px"
+                      fontSize:"16px"
 
                     }}>₹{item.value}</td>
                   </tr>
@@ -1361,22 +1361,6 @@ function App() {
         }}
       >
         {renderSelectedLayout()}
-      </div>
-
-      {/* Download button */}
-      <div style={{ textAlign: 'center', marginTop: "40px" }}>
-        <button
-          className="download-btn"
-          onClick={handleDownload}
-        >
-          Download as PDF
-        </button>
-      </div>
-    </div>
-  );
-}
-
-export default App;erSelectedLayout()}
       </div>
 
       {/* Download button */}
