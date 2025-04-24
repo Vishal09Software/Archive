@@ -286,19 +286,19 @@ function App() {
                       borderBottom: '1px solid black',
                       borderRight: '1px solid black',
                       padding:"10px",
-                      fontSize:"16px"
+                      fontSize:"14px"
                     }}>{index + 1}.</td>
                     <td style={{
                       borderTop: '1px solid black',
                       borderBottom: '1px solid black',
                       borderRight: '1px solid black',
-                      fontSize:"16px"
+                      fontSize:"14px"
 
                     }}>{item.name}</td>
                     <td style={{
                       borderTop: '1px solid black',
                       borderBottom: '1px solid black',
-                      fontSize:"16px"
+                      fontSize:"14px"
 
                     }}>₹{item.value}</td>
                   </tr>
@@ -314,17 +314,17 @@ function App() {
                   width: '322px',
                   borderBottom: '1px solid black',
                   borderRight: '1px solid black',
-                  fontSize:"16px"
+                  fontSize:"14px"
 
                 }}>
-                  <strong style={{ fontSize: '16px' }}>
+                  <strong style={{ fontSize: '14px' }}>
                     Amount (in words) Rs:&nbsp;
                   </strong>
                   <span style={{ borderBottom: '1px solid black' }}>
                     {numberToWords(total)}
                   </span>
                 </td>
-                <td style={{ borderBottom: '1px solid black', fontSize:"16px" }}>
+                <td style={{ borderBottom: '1px solid black', fontSize:"14px" }}>
                   <strong>
                     Total: ₹{total}
                   </strong>
