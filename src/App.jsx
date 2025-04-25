@@ -755,7 +755,7 @@ function App() {
       <div
         className="pdf-preview"
         style={{
-          margin: '60px',
+          margin: '50px',
           padding: '20px',
           width: '800px',
           minHeight: '1000px',
