@@ -1015,7 +1015,7 @@ function App() {
         style={{
           margin: '60px',
           width: '800px',
-          minHeight: '900px',
+          minHeight: '800px',
           fontFamily: 'Arial, sans-serif',
           backgroundColor: '#fff',
           color: 'black',
@@ -1035,10 +1035,10 @@ function App() {
 
         {/* Bill To Section */}
         <div style={{ 
-          marginBottom: '30px', 
+          marginBottom: '10px', 
           display: 'flex', 
           justifyContent: 'space-between',
-          padding: '20px',
+          padding: '10px',
           backgroundColor: '#fff'
         }}>
           <div>
@@ -1135,7 +1135,7 @@ function App() {
         </table>
 
         {/* Terms & Grand Total Red Bar */}
-        <div style={{ background: '#FF0000', color: '#fff', marginTop: '15%', padding: '8px 24px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid #000' }}>
+        <div style={{ background: '#FF0000', color: '#fff', marginTop: '25%', padding: '8px 24px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid #000' }}>
           <div style={{ fontSize: '11px' }}>
             <span style={{ fontWeight: 'bold' }}>Terms & Conditions:</span><br />
             <ul style={{ 
