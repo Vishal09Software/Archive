@@ -1234,7 +1234,7 @@ function App() {
           </div>
         </div>
         {/* Table */}
-        <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '13px', marginTop: '20px' }}>
+        <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '16px', marginTop: '20px' }}>
           <thead>
             <tr style={{ background: '#eaf1fb', color: '#222' }}>
               <th style={{ border: '1px solid #2d6ca2', padding: '8px' }}>S.No.</th>
@@ -1256,19 +1256,19 @@ function App() {
         {/* Calculation Section */}
         
         <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: '0' }}>
-          <table style={{ width: '350px', fontSize: '13px', borderCollapse: 'collapse', marginTop: '0' }}>
+          <table style={{ width: '350px', fontSize: '16px', borderCollapse: 'collapse', marginTop: '0' }}>
             <tbody>
               <tr>
                 <td style={{ padding: '6px', border: '1px solid #2d6ca2' }}>Subtotal</td>
                 <td style={{ padding: '6px', border: '1px solid #2d6ca2', textAlign: 'right' }}>₹{total}</td>
               </tr>
               <tr>
-                <td style={{ padding: '6px', border: '1px solid #2d6ca2' }}>Discount</td>
-                <td style={{ padding: '6px', border: '1px solid #2d6ca2', textAlign: 'right' }}>-</td>
+                <td style={{ padding: '6px', border: '1px solid #2d6ca2' }}>Less Discount</td>
+                <td style={{ padding: '6px', border: '1px solid #2d6ca2', textAlign: 'right' }}></td>
               </tr>
               <tr>
-                <td style={{ padding: '6px', border: '1px solid #2d6ca2' }}>Freight</td>
-                <td style={{ padding: '6px', border: '1px solid #2d6ca2', textAlign: 'right' }}>-</td>
+                <td style={{ padding: '6px', border: '1px solid #2d6ca2' }}>Add Freight</td>
+                <td style={{ padding: '6px', border: '1px solid #2d6ca2', textAlign: 'right' }}></td>
               </tr>
               <tr style={{ background: '#eaf1fb', fontWeight: 'bold' }}>
                 <td style={{ padding: '8px', border: '1px solid #2d6ca2' }}>Grand Total</td>
@@ -1278,11 +1278,11 @@ function App() {
           </table>
         </div>
          {/* Amount in Words */}
-         <div style={{ marginTop: '20px', fontSize: '13px' }}>
+         <div style={{ marginTop: '10px', fontSize: '15px' }}>
           <b>Total Amount (₹ - In Words):</b> {numberToWords(total)}
         </div>
         {/* Terms & Conditions */}
-        <div style={{ background: '#eaf1fb', marginTop: '15%', padding: '10px', borderRadius: '4px', fontSize: '13px' }}>
+        <div style={{ background: '#eaf1fb', marginTop: '15%', padding: '10px', borderRadius: '4px', fontSize: '15px' }}>
           <b>Terms & conditions</b>
           <ol style={{ margin: '8px 0 0 18px', padding: 0 }}>
             <li>Goods once sold will not be taken back.</li>
@@ -1293,7 +1293,7 @@ function App() {
         </div>
        
         {/* Footer */}
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', margin: '40px 20px 10px 20px', fontSize: '13px' }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', margin: '40px 20px 10px 20px', fontSize: '15px' }}>
           <div>
             <b>For : {titleValue}</b>
           </div>
@@ -1423,7 +1423,7 @@ function App() {
         {/* Header */}
         <div style={{ background: '#6d4c41', color: '#fff', display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '12px 20px' }}>
           <div style={{ fontWeight: 'bold', fontSize: '32px', letterSpacing: '1px', fontFamily: 'Arial Black, Arial, sans-serif' }}>INVOICE</div>
-          <div style={{ textAlign: 'right', fontSize: '13px' }}>
+          <div style={{ textAlign: 'right', fontSize: '16px' }}>
             <div><b>Invoice No.:</b> ____________</div>
             <div><b>Invoice Date.:</b> ____________</div>
           </div>
@@ -1431,7 +1431,7 @@ function App() {
         {/* Company Info */}
         <div style={{ borderBottom: '1px solid #6d4c41', padding: '10px 20px', background: '#f7f3f0' }}>
           <div style={{ fontWeight: 'bold', fontSize: '18px' }}>Company Name: <span style={{ fontWeight: 'normal' ,fontWeight:'bold' }}>{titleValue}</span></div>
-          <div style={{ fontSize: '14px', margin: '2px 0' ,whiteSpace: 'pre-line'}}>Address: <span style={{ fontWeight: 'normal' }}>{addressValue}</span></div>
+          <div style={{ fontSize: '15px', margin: '2px 0' ,whiteSpace: 'pre-line'}}>Address: <span style={{ fontWeight: 'normal' }}>{addressValue}</span></div>
         </div>
         {/* Billing To */}
         <div style={{ borderBottom: '1px solid #6d4c41', background: '#f7f3f0', padding: '10px 20px' }}>
@@ -1443,7 +1443,7 @@ function App() {
           </div>
         </div>
         {/* Table */}
-        <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '13px', marginTop: '0' }}>
+        <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '16px', marginTop: '0' }}>
           <thead>
             <tr style={{ background: '#6d4c41', color: '#fff' }}>
               <th style={{ border: '1px solid #6d4c41', padding: '8px' }}>SR No.</th>
@@ -1464,7 +1464,7 @@ function App() {
           </tbody>
         </table>
         {/* Terms & Totals */}
-        <div style={{ display: 'flex', borderTop: '1px solid #6d4c41', borderBottom: '1px solid #6d4c41', fontSize: '14px' }}>
+        <div style={{ display: 'flex', borderTop: '1px solid #6d4c41', borderBottom: '1px solid #6d4c41', fontSize: '15px' }}>
           <div style={{ flex: 2, borderRight: '1px solid #6d4c41', padding: '10px' }}>
             <b>Terms & conditions:</b>
             <ol style={{ margin: '8px 0 0 18px', padding: 0 }}>
@@ -1474,8 +1474,8 @@ function App() {
               <li>E.& O.E.</li>
             </ol>
           </div>
-          <div style={{ flex: 1, padding: '20px' }}>
-            <table style={{ width: '100%', fontSize: '14px' }}>
+          <div style={{ flex: 1, padding: '15px' }}>
+            <table style={{ width: '100%', fontSize: '15px' }}>
               <tbody>
                 <tr>
                   <td>SubTotal</td>
@@ -1500,11 +1500,11 @@ function App() {
         </div>
         {/* Total in words and signature */}
         <div style={{ display: 'flex', border: '1px solid #6d4c41', minHeight: '60px', marginTop:'47%' }}>
-          <div style={{ flex: 2, borderRight: '1px solid #6d4c41', padding: '16px', fontSize: '14px' }}>
+          <div style={{ flex: 2, borderRight: '1px solid #6d4c41', padding: '16px', fontSize: '15px' }}>
             <b>Total Amount in Word</b><br />
             {numberToWords(total)}
           </div>
-          <div style={{ flex: 1, textAlign: 'center', padding: '16px', fontSize: '14px' }}>
+          <div style={{ flex: 1, textAlign: 'center', padding: '16px', fontSize: '15px' }}>
             <b>Seal & Signature</b>
           </div>
         </div>
