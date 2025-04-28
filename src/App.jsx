@@ -1114,16 +1114,16 @@ function App() {
                 <div style={{ fontWeight: 'bold', marginBottom: '8px' }}>Amount in Words:</div>
                 <div style={{ minHeight: '40px', fontStyle: 'italic' }}>{numberToWords(total)}</div>
               </td>
-              <td style={{ padding: '6px 10px', borderBottom: '1px solid #000', width: '20%' }}>Subtotal</td>
-              <td style={{ padding: '6px 10px', borderBottom: '1px solid #000', textAlign: 'right', width: '20%' }}>₹{total}</td>
+              <td style={{ padding: '6px 10px', border: '1px solid #000', width: '20%' }}>Subtotal</td>
+              <td style={{ padding: '6px 10px', border: '1px solid #000', textAlign: 'right', width: '20%' }}>₹{total}</td>
             </tr>
             <tr>
-              <td style={{ padding: '6px 10px', borderBottom: '1px solid #000' }}>Discount</td>
-              <td style={{ padding: '6px 10px', borderBottom: '1px solid #000', textAlign: 'right' }}></td>
+              <td style={{ padding: '6px 10px', border: '1px solid #000' }}>Less Discount</td>
+              <td style={{ padding: '6px 10px', border: '1px solid #000', textAlign: 'right' }}></td>
             </tr>
             <tr>
-              <td style={{ padding: '6px 10px', borderBottom: '1px solid #000' }}>Freight</td>
-              <td style={{ padding: '6px 10px', borderBottom: '1px solid #000', textAlign: 'right' }}></td>
+              <td style={{ padding: '6px 10px', border: '1px solid #000' }}>Add Freight</td>
+              <td style={{ padding: '6px 10px', border: '1px solid #000', textAlign: 'right' }}></td>
             </tr>
             <tr>
               <td colSpan={2} style={{ background: '#FF0000', color: '#fff', textAlign: 'center', fontWeight: 'bold', fontSize: '22px', padding: '12px 0', borderBottom: '1px solid #000' }}>
