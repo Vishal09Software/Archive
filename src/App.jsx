@@ -1250,16 +1250,7 @@ function App() {
                 <td style={{ border: '1px solid #2d6ca2', padding: '8px', textAlign: 'right' }}>₹{item.value}</td>
               </tr>
             ))}
-            {/* Empty rows for consistent height */}
-            {[...Array(Math.max(0, 5 - itemBreakdown.length))].map((_, idx) => (
-              <tr key={`empty-${idx}`}>
-                <td style={{ border: '1px solid #2d6ca2', padding: '8px' }}>&nbsp;</td>
-                <td style={{ border: '1px solid #2d6ca2', padding: '8px' }}></td>
-                <td style={{ border: '1px solid #2d6ca2', padding: '8px' }}></td>
-                <td style={{ border: '1px solid #2d6ca2', padding: '8px' }}></td>
-                <td style={{ border: '1px solid #2d6ca2', padding: '8px' }}></td>
-              </tr>
-            ))}
+           
           </tbody>
         </table>
         {/* Calculation Section */}
