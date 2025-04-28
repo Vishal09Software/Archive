@@ -1006,105 +1006,178 @@ function App() {
     );
   };
 
-  // LAYOUT #4 – New Minimalistic, modern layout
+  // LAYOUT #4 – New Red Invoice Layout
   const Layout4 = () => {
     const total = itemBreakdown.reduce((sum, itm) => sum + itm.value, 0);
     return (
       <div
         className="pdf-preview"
         style={{
-          margin: '60px auto',
-          padding: '30px',
-          border: 'none',
+          margin: '60px',
           width: '800px',
-          minHeight: '800px',
-          fontFamily: 'Verdana, sans-serif',
-          backgroundColor: '#ffffff',
-          boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-          color: 'black'
+          minHeight: '900px',
+          fontFamily: 'Arial, sans-serif',
+          backgroundColor: '#fff',
+          color: 'black',
+          border: '1px solid #000',
+          boxSizing: 'border-box',
+          borderRadius: '5px'
         }}
       >
         {/* Header */}
-        <div style={{ textAlign: 'center', marginBottom: '25px' }}>
-          <h2 style={{ margin: 0, fontSize: '32px', color: '#333' }}>{titleValue}</h2>
-          <p style={{ margin: '5px 0', fontSize: '12px', color: '#777', whiteSpace: 'pre-line' }}>
-            {addressValue}
-          </p>
-        </div>
-        {/* Invoice details */}
-        <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '20px', fontSize: '14px' }}>
-          <div>
-            <strong>Invoice</strong>
-          </div>
-          <div style={{ marginRight: '40px' }}>
-            <strong>Date:</strong> <span style={{ borderBottom: '1px dotted #000', padding: '0 8px' }}></span>
-            <br />
-            <strong>Invoice #:</strong> <span style={{ borderBottom: '1px dotted #000', padding: '0 8px' }}></span>
+        <div style={{ background: '#FF0000', color: '#fff', padding: '18px 24px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+          <div style={{ fontWeight: 'bold', fontSize: '22px' }}>Invoice</div>
+          <div style={{ textAlign: 'right', fontSize: '13px' }}>
+            <div style={{ fontWeight: 'bold' }}>{titleValue}</div>
+            <div style={{ whiteSpace: 'pre-line' }}>{addressValue}</div>
           </div>
         </div>
-        {/* Client details */}
-        <div style={{ marginBottom: '20px', fontSize: '14px' }}>
-          <strong>Bill To:</strong>
-          <span style={{
-            marginLeft: '8px',
-            borderBottom: '1px dotted #000',
-            padding: '0 4px',
-            fontWeight: 'bold',
-            fontSize: '16px'
-          }}>
-            {name}
-          </span>
-        </div>
-        {/* Items Table */}
-        <table style={{
-          width: '100%',
-          borderCollapse: 'collapse',
-          marginBottom: '20px',
-          fontSize: '14px'
+
+        {/* Bill To Section */}
+        <div style={{ 
+          marginBottom: '30px', 
+          display: 'flex', 
+          justifyContent: 'space-between',
+          padding: '20px',
+          backgroundColor: '#fff'
         }}>
-          <thead style={{ backgroundColor: '#f0f0f0' }}>
-            <tr>
-              <th style={{ padding: '10px', border: '1px solid #ddd' }}>Sr. No.</th>
-              <th style={{ padding: '10px', border: '1px solid #ddd' }}>Item Description</th>
-              <th style={{ padding: '10px', border: '1px solid #ddd' }}>Amount (₹)</th>
-            </tr>
-          </thead>
-          <tbody>
-            {itemBreakdown.map((item, index) => (
-              <tr key={index}>
-                <td style={{ padding: '10px', border: '1px solid #ddd', textAlign: 'center' }}>{index + 1}</td>
-                <td style={{ padding: '10px', border: '1px solid #ddd' }}>{item.name}</td>
-                <td style={{ padding: '10px', border: '1px solid #ddd', textAlign: 'right' }}>₹{item.value}</td>
+          <div>
+            <h3 style={{ 
+              margin: '0 0 15px 0',
+              fontSize: '18px',
+              fontWeight: 'bold',
+              color: '#333'
+            }}>Bill To</h3>
+            <div style={{ fontSize: '14px' }}>
+              <p style={{ 
+                margin: '0 0 8px 0', 
+                fontWeight: 'bold',
+                color: '#444'
+              }}>{name}</p>
+            </div>
+          </div>
+          <div>
+            <div style={{ 
+              marginBottom: '8px',
+              display: 'flex',
+              alignItems: 'center'
+            }}>
+              <span style={{ 
+                fontWeight: 'bold',
+                color: '#333',
+                minWidth: '100px'
+              }}>Invoice No.</span>
+              <span style={{ marginLeft: '20px' }}></span>
+            </div>
+            <div style={{ 
+              marginBottom: '8px',
+              display: 'flex',
+              alignItems: 'center'
+            }}>
+              <span style={{ 
+                fontWeight: 'bold',
+                color: '#333',
+                minWidth: '100px'
+              }}>Date</span>
+              <span style={{ marginLeft: '20px' }}></span>
+            </div>
+          </div>
+        </div>
+
+         {/* Items Table (below main section) */}
+         <div >
+          <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '13px' }}>
+            <thead>
+              <tr style={{ background: '#FF0000', color: '#fff' }}>
+                <th style={{ padding: '8px', width: '10%' }}>S.No.</th>
+                <th style={{ padding: '8px' }}>Description</th>
+                <th style={{ padding: '8px', width: '20%' }}>Amount</th>
               </tr>
-            ))}
+            </thead>
+            <tbody>
+              {itemBreakdown.map((item, index) => (
+                <tr key={index}>
+                  <td style={{ border: '1px solid #000', padding: '8px', textAlign: 'center' }}>{index + 1}</td>
+                  <td style={{ border: '1px solid #000', padding: '8px' ,textAlign: 'center'}}>{item.name}</td>
+                  <td style={{ border: '1px solid #000', padding: '8px', textAlign: 'center' }}>₹{item.value}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        {/* Main Table Section */}
+        <table style={{ width: '100%', borderCollapse: 'collapse', margin: 0, fontSize: '13px', border: '1px solid #000', borderTop: 'none' }}>
+          <tbody>
+            <tr>
+              <td style={{ borderRight: '1px solid #000', padding: '10px', width: '60%' }} rowSpan={5}>
+                <div style={{ fontWeight: 'bold', marginBottom: '8px' }}>Amount in Words:</div>
+                <div style={{ minHeight: '40px', fontStyle: 'italic' }}>{numberToWords(total)}</div>
+              </td>
+              <td style={{ padding: '6px 10px', borderBottom: '1px solid #000', width: '20%' }}>Subtotal</td>
+              <td style={{ padding: '6px 10px', borderBottom: '1px solid #000', textAlign: 'right', width: '20%' }}>₹{total}</td>
+            </tr>
+            <tr>
+              <td style={{ padding: '6px 10px', borderBottom: '1px solid #000' }}>Discount</td>
+              <td style={{ padding: '6px 10px', borderBottom: '1px solid #000', textAlign: 'right' }}></td>
+            </tr>
+            <tr>
+              <td style={{ padding: '6px 10px', borderBottom: '1px solid #000' }}>Freight</td>
+              <td style={{ padding: '6px 10px', borderBottom: '1px solid #000', textAlign: 'right' }}></td>
+            </tr>
+            <tr>
+              <td colSpan={2} style={{ background: '#FF0000', color: '#fff', textAlign: 'center', fontWeight: 'bold', fontSize: '22px', padding: '12px 0', borderBottom: '1px solid #000' }}>
+                GRAND TOTAL<br />
+                <span style={{ fontSize: '28px', fontWeight: 'bold', letterSpacing: '1px' }}>₹{total}</span>
+              </td>
+            </tr>
           </tbody>
         </table>
-        {/* Totals */}
-        <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '14px' }}>
-          <div style={{ maxWidth: '65%' }}>
-            <strong>Amount in words:</strong>
-            <p style={{ fontStyle: 'italic', margin: '5px 0' }}>{numberToWords(total)}</p>
+
+        {/* Terms & Grand Total Red Bar */}
+        <div style={{ background: '#FF0000', color: '#fff', marginTop: '15%', padding: '8px 24px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid #000' }}>
+          <div style={{ fontSize: '11px' }}>
+            <span style={{ fontWeight: 'bold' }}>Terms & Conditions:</span><br />
+            <ul style={{ 
+                margin: '0',
+                paddingLeft: '20px',
+                fontSize: '12px'
+              }}>
+                <li>Goods once sold will not be taken back.</li>
+                <li>No responsibility for breakages during transit.</li>
+                <li>All disputes subject to District Jurisdiction only.</li>
+                <li>E.& O.E.</li>
+              </ul>
           </div>
-          <div style={{ textAlign: 'right' }}>
-            <strong>Total: ₹{total}</strong>
-          </div>
-        </div>
-        {/* Footer */}
-        <div style={{ marginTop: '35%', borderTop: '1px solid #ddd', fontSize: '12px' }}>
-          <div style={{ marginBottom: '10px' }}>
-            <strong>Terms and Conditions:</strong>
-            <ul style={{ margin: '5px 0 0 20px' }}>
-              <li>Goods once sold will not be taken back.</li>
-              <li>No responsibility for breakages during transit.</li>
-              <li>All disputes subject to District Jurisdiction only.</li>
-              <li>E.& O.E.</li>
-            </ul>
-          </div>
-          <div style={{ textAlign: 'center', }}>
-            <p style={{ margin: 0, fontWeight: 'bold' }}>For {forValue}</p>
-            <p style={{ borderTop: '1px solid #000', width: '150px', margin: '0 auto' }}>Authorized Signatory</p>
+          <div style={{ textAlign: 'center', fontWeight: 'bold', fontSize: '20px' }}>
+            {/* Grand Total already shown above */}
           </div>
         </div>
+
+        {/* Payment Mode, Signature Row */}
+        <div style={{ display: 'flex', borderBottom: '1px solid #000', minHeight: '70px' }}>
+          <div style={{ flex: 1, borderRight: '1px solid #000', padding: '18px 12px', fontSize: '13px' }}>
+            <span style={{ fontWeight: 'bold' }}>Payment Mode:</span>
+          </div>
+          <div style={{ flex: 1, textAlign: 'center', padding: '18px 12px', fontSize: '13px' }}>
+            <span style={{ fontWeight: 'bold' }}>Seal & Signature</span>
+          </div>
+        </div>
+
+        <div
+        style={{
+          // margin: '60px',
+          width: '600px',
+          backgroundColor: '#FF0000',
+          color: 'black',
+          border: '10px solid #FF0000',
+          boxSizing: 'border-box',
+          borderRadius: '2px',
+          // marginTop: '10px',
+        }}
+      >
+        </div>
+        
       </div>
     );
   };
@@ -1116,77 +1189,127 @@ function App() {
   // LAYOUT #5 - Minimalistic Clean Layout
   const Layout5 = () => {
     const total = itemBreakdown.reduce((sum, itm) => sum + itm.value, 0);
+
     return (
       <div
         className="pdf-preview"
         style={{
-          margin: '60px auto',
-          padding: '20px',
-          border: '1px solid #ddd',
+          margin: '60px',
+          padding: '0',
+          border: '1px solid #000',
           width: '800px',
           minHeight: '800px',
-          fontFamily: 'Calibri, sans-serif',
+          fontFamily: 'Calibri, Arial, sans-serif',
           backgroundColor: '#fff',
-          boxShadow: '0 2px 5px rgba(0,0,0,0.1)',
-          color: 'black'
+          color: 'black',
+          boxShadow: '0 2px 5px rgba(0,0,0,0.1)'
         }}
       >
-        <div style={{ textAlign: 'center', marginBottom: '20px' }}>
-          <h2 style={{ margin: 0, fontSize: '32px' }}>{titleValue}</h2>
-          <p style={{ fontSize: '12px', whiteSpace: 'pre-line', margin: '5px 0' }}>{addressValue}</p>
-        </div>
-        <div style={{ textAlign: 'center', marginBottom: '20px', borderBottom: '1px solid #ddd' }}>
-          <h2 style={{ margin: 0, fontSize: '32px' }}>INVOICE</h2>
-        </div>
-        <div style={{ marginBottom: '20px', display: 'flex', justifyContent: 'space-between', fontSize: '14px' }}>
+        {/* Header */}
+        <div style={{ background: '#2d6ca2', color: '#fff', display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '15px 20px' ,borderRadius: '5px'}}>
           <div>
-            <strong>Bill To:</strong> <span style={{ borderBottom: '1px dotted #000', fontWeight: 'bold', fontSize: '16px' }}>{name}</span>
+            <div style={{ fontWeight: 'bold', fontSize: '22px', letterSpacing: '1px' }}>TAX INVOICE</div>
           </div>
-          <div style={{ marginRight: '40px' }}>
-            <strong>Date:</strong> <span style={{ borderBottom: '1px dotted #000', padding: '0 8px' }}></span>
-            <br />
-            <strong>Invoice #:</strong> <span style={{ borderBottom: '1px dotted #000', padding: '0 8px' }}></span>
+          <div style={{ textAlign: 'right', fontSize: '13px' }}>
+            <div><b>INVOICE NO :</b>______________</div>
+            <div><b>DATE :</b>______________</div>
           </div>
         </div>
-        <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '14px' }}>
-          <thead style={{ background: '#f2f2f2' }}>
-            <tr>
-              <th style={{ padding: '10px', border: '1px solid #ccc' }}>Sr. No.</th>
-              <th style={{ padding: '10px', border: '1px solid #ccc' }}>Description</th>
-              <th style={{ padding: '10px', border: '1px solid #ccc' }}>Amount (₹)</th>
+        {/* Business Info Row */}
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', padding: '18px 20px 0 20px', borderBottom: '1px solid #2d6ca2' }}>
+          <div>
+            <div style={{ fontWeight: 'bold', fontSize: '28px', letterSpacing: '1px' }}>{titleValue}</div>
+            <div style={{ fontSize: '14px', whiteSpace: 'pre-line', margin: '2px 0' }}>{addressValue}</div>
+          </div>
+          <div>
+           
+          </div>
+        </div>
+        {/* Bill To and Payment Info */}
+        <div style={{ display: 'flex', justifyContent: 'space-between', padding: '10px 20px', fontSize: '13px' }}>
+          <div>
+            <b>Bill To:</b><br />
+            <div style={{ fontSize: '16px', fontWeight: 'bold' }}>{name}</div>
+           
+          </div>
+        </div>
+        {/* Table */}
+        <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '13px', marginTop: '20px' }}>
+          <thead>
+            <tr style={{ background: '#eaf1fb', color: '#222' }}>
+              <th style={{ border: '1px solid #2d6ca2', padding: '8px' }}>S.No.</th>
+              <th style={{ border: '1px solid #2d6ca2', padding: '8px' }}>Description</th>
+              <th style={{ border: '1px solid #2d6ca2', padding: '8px' }}>Amount</th>
             </tr>
           </thead>
           <tbody>
             {itemBreakdown.map((item, index) => (
               <tr key={index}>
-                <td style={{ padding: '10px', border: '1px solid #ccc', textAlign: 'center' }}>{index + 1}</td>
-                <td style={{ padding: '10px', border: '1px solid #ccc' }}>{item.name}</td>
-                <td style={{ padding: '10px', border: '1px solid #ccc', textAlign: 'right' }}>₹{item.value}</td>
+                <td style={{ border: '1px solid #2d6ca2', padding: '8px' }}>{index + 1}</td>
+                <td style={{ border: '1px solid #2d6ca2', padding: '8px' }}>{item.name}</td>
+                <td style={{ border: '1px solid #2d6ca2', padding: '8px', textAlign: 'right' }}>₹{item.value}</td>
+              </tr>
+            ))}
+            {/* Empty rows for consistent height */}
+            {[...Array(Math.max(0, 5 - itemBreakdown.length))].map((_, idx) => (
+              <tr key={`empty-${idx}`}>
+                <td style={{ border: '1px solid #2d6ca2', padding: '8px' }}>&nbsp;</td>
+                <td style={{ border: '1px solid #2d6ca2', padding: '8px' }}></td>
+                <td style={{ border: '1px solid #2d6ca2', padding: '8px' }}></td>
+                <td style={{ border: '1px solid #2d6ca2', padding: '8px' }}></td>
+                <td style={{ border: '1px solid #2d6ca2', padding: '8px' }}></td>
               </tr>
             ))}
           </tbody>
         </table>
-        <div style={{ marginTop: '20px', display: 'flex', justifyContent: 'space-between', fontSize: '14px' }}>
-          <div style={{ maxWidth: '70%' }}>
-            <strong>Amount in Words:</strong>
-            <p style={{ fontStyle: 'italic', margin: '5px 0' }}>{numberToWords(total)}</p>
-          </div>
-          <div style={{ textAlign: 'right' }}>
-            <strong>Total: ₹{total}</strong>
-          </div>
+        {/* Calculation Section */}
+        
+        <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: '0' }}>
+          <table style={{ width: '350px', fontSize: '13px', borderCollapse: 'collapse', marginTop: '0' }}>
+            <tbody>
+              <tr>
+                <td style={{ padding: '6px', border: '1px solid #2d6ca2' }}>Subtotal</td>
+                <td style={{ padding: '6px', border: '1px solid #2d6ca2', textAlign: 'right' }}>₹{total}</td>
+              </tr>
+              <tr>
+                <td style={{ padding: '6px', border: '1px solid #2d6ca2' }}>Discount</td>
+                <td style={{ padding: '6px', border: '1px solid #2d6ca2', textAlign: 'right' }}>-</td>
+              </tr>
+              <tr>
+                <td style={{ padding: '6px', border: '1px solid #2d6ca2' }}>Freight</td>
+                <td style={{ padding: '6px', border: '1px solid #2d6ca2', textAlign: 'right' }}>-</td>
+              </tr>
+              <tr style={{ background: '#eaf1fb', fontWeight: 'bold' }}>
+                <td style={{ padding: '8px', border: '1px solid #2d6ca2' }}>Grand Total</td>
+                <td style={{ padding: '8px', border: '1px solid #2d6ca2', textAlign: 'right' }}>₹{total}</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-        <div style={{ marginTop: '30%', fontSize: '12px' }}>
-          <strong>Terms and Conditions:</strong>
-          <ul style={{ margin: '5px 0 0 20px' }}>
+         {/* Amount in Words */}
+         <div style={{ marginTop: '20px', fontSize: '13px' }}>
+          <b>Total Amount (₹ - In Words):</b> {numberToWords(total)}
+        </div>
+        {/* Terms & Conditions */}
+        <div style={{ background: '#eaf1fb', marginTop: '15%', padding: '10px', borderRadius: '4px', fontSize: '13px' }}>
+          <b>Terms & conditions</b>
+          <ol style={{ margin: '8px 0 0 18px', padding: 0 }}>
             <li>Goods once sold will not be taken back.</li>
             <li>No responsibility for breakages during transit.</li>
             <li>All disputes subject to District Jurisdiction only.</li>
             <li>E.& O.E.</li>
-          </ul>
+          </ol>
         </div>
-        <div style={{ textAlign: 'center', marginTop: '20px' }}>
-          <p style={{ margin: 0, fontWeight: 'bold' }}>For {forValue}</p>
-          <p style={{ borderTop: '1px solid #000', width: '150px', margin: '10px auto 0' }}>Authorized Signatory</p>
+       
+        {/* Footer */}
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', margin: '40px 20px 10px 20px', fontSize: '13px' }}>
+          <div>
+            <b>For : {titleValue}</b>
+          </div>
+          <div style={{ textAlign: 'center' }}>
+            <div style={{ borderTop: '1px solid #000', width: '180px', margin: '0 auto 5px auto' }}></div>
+            Authorised Signatory
+          </div>
         </div>
       </div>
     );
@@ -1296,81 +1419,103 @@ function App() {
       <div
         className="pdf-preview"
         style={{
-          margin: '60px auto',
-          padding: '40px',
+          margin: '60px',
+          padding: '0',
           minHeight: '800px',
           width: '800px',
-          fontFamily: 'Georgia, serif',
-          backgroundColor: '#fafafa',
-          border: '1px solid #aaa',
-          color: 'black'
+          fontFamily: 'Calibri, Arial, sans-serif',
+          backgroundColor: '#fff',
+          color: 'black',
+          border: '1px solid #6d4c41',
         }}
       >
-        <div style={{ textAlign: 'center', marginBottom: '30px' }}>
-          <h2 style={{ margin: '0', fontSize: '34px' }}>{titleValue}</h2>
-          <p style={{ fontSize: '12px', whiteSpace: 'pre-line', margin: '5px 0' }}>{addressValue}</p>
-        </div>
-        <div style={{ textAlign: 'center', marginBottom: '20px', borderBottom: '1px solid #aaa', borderTop: '1px solid #aaa' }}>
-          <h2 style={{
-            fontSize: '28px',
-            fontWeight: 'bold',
-            margin: '0',
-            color: '#333',
-            textTransform: 'uppercase',
-            letterSpacing: '1px',
-            // paddingBottom: 'px'
-          }}>
-            INVOICE
-          </h2>
-        </div>
-        <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '14px', marginBottom: '20px' }}>
-          <div>
-            <strong>Bill To:</strong> <span style={{ borderBottom: '1px dotted #000', fontWeight: 'bold', fontSize: '16px' }}>{name}</span>
-          </div>
-          <div style={{ marginRight: '40px' }}>
-            <p><strong>Date:</strong> <span style={{ borderBottom: '1px dotted #000', padding: '0 8px' }}></span></p>
-            <p><strong>Invoice #:</strong> <span style={{ borderBottom: '1px dotted #000', padding: '0 8px' }}></span></p>
+        {/* Header */}
+        <div style={{ background: '#6d4c41', color: '#fff', display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '12px 20px' }}>
+          <div style={{ fontWeight: 'bold', fontSize: '32px', letterSpacing: '1px', fontFamily: 'Arial Black, Arial, sans-serif' }}>INVOICE</div>
+          <div style={{ textAlign: 'right', fontSize: '13px' }}>
+            <div><b>Invoice No.:</b> ____________</div>
+            <div><b>Invoice Date.:</b> ____________</div>
           </div>
         </div>
-        <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '14px' }}>
-          <thead style={{ background: '#eaeaea' }}>
-            <tr>
-              <th style={{ padding: '10px', border: '1px solid #ccc' }}>Sr. No.</th>
-              <th style={{ padding: '10px', border: '1px solid #ccc' }}>Description</th>
-              <th style={{ padding: '10px', border: '1px solid #ccc' }}>Amount (₹)</th>
+        {/* Company Info */}
+        <div style={{ borderBottom: '1px solid #6d4c41', padding: '10px 20px', background: '#f7f3f0' }}>
+          <div style={{ fontWeight: 'bold', fontSize: '18px' }}>Company Name: <span style={{ fontWeight: 'normal' ,fontWeight:'bold' }}>{titleValue}</span></div>
+          <div style={{ fontSize: '14px', margin: '2px 0' ,whiteSpace: 'pre-line'}}>Address: <span style={{ fontWeight: 'normal' }}>{addressValue}</span></div>
+        </div>
+        {/* Billing To */}
+        <div style={{ borderBottom: '1px solid #6d4c41', background: '#f7f3f0', padding: '10px 20px' }}>
+          <div style={{ fontWeight: 'bold', fontSize: '16px', marginBottom: '4px' }}>Billing To:</div>
+          <div style={{ display: 'flex', flexWrap: 'wrap', fontSize: '13px' }}>
+            <div style={{ flex: 1, minWidth: '220px' }}>
+             <span style={{ fontWeight: 'bold' ,fontSize:'16px' }}>{name}</span>
+            </div>
+          </div>
+        </div>
+        {/* Table */}
+        <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '13px', marginTop: '0' }}>
+          <thead>
+            <tr style={{ background: '#6d4c41', color: '#fff' }}>
+              <th style={{ border: '1px solid #6d4c41', padding: '8px' }}>SR No.</th>
+              <th style={{ border: '1px solid #6d4c41', padding: '8px' }}>Description</th>
+              <th style={{ border: '1px solid #6d4c41', padding: '8px' }}>Amount</th>
             </tr>
           </thead>
           <tbody>
             {itemBreakdown.map((item, index) => (
               <tr key={index}>
-                <td style={{ padding: '10px', border: '1px solid #ccc', textAlign: 'center' }}>{index + 1}</td>
-                <td style={{ padding: '10px', border: '1px solid #ccc' }}>{item.name}</td>
-                <td style={{ padding: '10px', border: '1px solid #ccc', textAlign: 'right' }}>₹{item.value}</td>
+                <td style={{ border: '1px solid #6d4c41', padding: '8px', textAlign: 'center' }}>{index + 1}</td>
+                <td style={{ border: '1px solid #6d4c41', padding: '8px' }}>{item.name}</td>
+                <td style={{ border: '1px solid #6d4c41', padding: '8px', textAlign: 'right' }}>₹{item.value}</td>
               </tr>
             ))}
+            {/* Empty rows for consistent height */}
+           
           </tbody>
         </table>
-        <div style={{ marginTop: '20px', display: 'flex', justifyContent: 'space-between', fontSize: '14px' }}>
-          <div style={{ maxWidth: '70%' }}>
-            <strong>Amount in Words:</strong>
-            <p style={{ fontStyle: 'italic', margin: '5px 0' }}>{numberToWords(total)}</p>
+        {/* Terms & Totals */}
+        <div style={{ display: 'flex', borderTop: '1px solid #6d4c41', borderBottom: '1px solid #6d4c41', fontSize: '14px' }}>
+          <div style={{ flex: 2, borderRight: '1px solid #6d4c41', padding: '10px' }}>
+            <b>Terms & conditions:</b>
+            <ol style={{ margin: '8px 0 0 18px', padding: 0 }}>
+              <li>Goods once sold will not be taken back.</li>
+              <li>No responsibility for breakages during transit.</li>
+              <li>All disputes subject to District Jurisdiction only.</li>
+              <li>E.& O.E.</li>
+            </ol>
           </div>
-          <div style={{ textAlign: 'right' }}>
-            <strong>Total: ₹{total}</strong>
+          <div style={{ flex: 1, padding: '20px' }}>
+            <table style={{ width: '100%', fontSize: '14px' }}>
+              <tbody>
+                <tr>
+                  <td>SubTotal</td>
+                  <td style={{ textAlign: 'right' }}>₹{total}</td>
+                </tr>
+                <tr>
+                  <td>Discount</td>
+                  <td style={{ textAlign: 'right' }}></td>
+                </tr>
+                <tr>
+                  <td>Freight</td>
+                  <td style={{ textAlign: 'right' }}></td>
+                </tr>
+
+                <tr>
+                  <td style={{ fontWeight: 'bold', fontSize: '16px' }}>Total</td>
+                  <td style={{ textAlign: 'right', fontWeight: 'bold', fontSize: '16px' }}>₹{total}</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
-        <div style={{ marginTop: '23%', fontSize: '12px' }}>
-          <strong>Terms and Conditions:</strong>
-          <ul style={{ margin: '5px 0 0 20px' }}>
-            <li>Goods once sold will not be taken back.</li>
-            <li>No responsibility for breakages during transit.</li>
-            <li>All disputes subject to District Jurisdiction only.</li>
-            <li>E.& O.E.</li>
-          </ul>
-        </div>
-        <div style={{ textAlign: 'center' }}>
-          <p style={{ margin: 0, fontWeight: 'bold' }}>For {forValue}</p>
-          <p style={{ borderTop: '1px solid #000', width: '150px', margin: '10px auto 0' }}>Authorized Signatory</p>
+        {/* Total in words and signature */}
+        <div style={{ display: 'flex', border: '1px solid #6d4c41', minHeight: '60px', marginTop:'47%' }}>
+          <div style={{ flex: 2, borderRight: '1px solid #6d4c41', padding: '16px', fontSize: '14px' }}>
+            <b>Total Amount in Word</b><br />
+            {numberToWords(total)}
+          </div>
+          <div style={{ flex: 1, textAlign: 'center', padding: '16px', fontSize: '14px' }}>
+            <b>Seal & Signature</b>
+          </div>
         </div>
       </div>
     );
